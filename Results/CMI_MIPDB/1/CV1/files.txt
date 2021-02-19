@@ -1,0 +1,105 @@
+The following hyperparameters are used
+default_hyperparams  = {### DATA PARAMETERS ###
+								'dataset_name'             : 'CMI_MIPDB',
+								'run_name'                 : '1',
+								
+								### MODEL PARAMETERS ###
+								'g_dim'                    : 100,
+								'u_dim'                    : 3, 
+								'factors_dim'              : 20,
+								'g0_encoder_dim'           : 100,
+								'c_encoder_dim'            : 100,
+								'controller_dim'           : 100,
+								'g0_prior_kappa'           : 0.1,
+								'u_prior_kappa'            : 0.1,
+								'keep_prob'                : 0.98,
+								'clip_val'                 : 5.0,
+								'max_norm'                 : 200,
+			
+								### OPTIMIZER PARAMETERS 
+								'learning_rate'            : 0.001,
+								'learning_rate_min'        : 1e-5,
+								'learning_rate_decay'      : 0.95,
+								'scheduler_on'             : True,
+								'scheduler_patience'       : 4,
+								'scheduler_cooldown'       : 4,
+								'epsilon'                  : 0.1,
+								'betas'                    : (0.9, 0.99),
+								'l2_gen_scale'             : 0,
+								'l2_con_scale'             : 0,
+								'kl_weight_schedule_start' : 0,
+								'kl_weight_schedule_dur'   : 2000,
+								'l2_weight_schedule_start' : 0,
+								'l2_weight_schedule_dur'   : 2000,
+								'ew_weight_schedule_start' : 0,
+								'ew_weight_schedule_dur'   : 2000}
+optimiser = opt.SGD(self.parameters(), lr = self.learning_rate)
+Loss values
+[ 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19]
+[ 7  8  9 10 11 12 13 14 15 16 17 18 19] [0 1 2 3 4 5 6]
+Random seed: 788
+Random Train Reconstruction Loss: 215.4825, Random Test Reconstruction Loss: 213.5590
+torch.Size([12726, 50, 128]) torch.Size([12726, 50, 111])
+torch.Size([6385, 50, 128]) torch.Size([6385, 50, 111])
+12726 6385
+Epoch:    1, tloss: 114.156, tr loss: 108.000, tkl loss: 258.304, vr loss: 105.117, v_loss: 105.117, vkl loss: 146.469
+Epoch:    2, tloss: 107.748, tr loss: 104.339, tkl loss: 24.409, vr loss: 103.826, v_loss: 103.826, vkl loss: 84.937
+Epoch:    3, tloss: 107.017, tr loss: 103.899, tkl loss: 12.827, vr loss: 103.228, v_loss: 103.228, vkl loss: 61.119
+Epoch:    4, tloss: 106.263, tr loss: 103.666, tkl loss: 7.486, vr loss: 102.844, v_loss: 102.844, vkl loss: 50.192
+Epoch:    5, tloss: 105.772, tr loss: 103.536, tkl loss: 5.023, vr loss: 102.565, v_loss: 102.565, vkl loss: 45.375
+Epoch:    6, tloss: 105.560, tr loss: 103.436, tkl loss: 3.904, vr loss: 102.359, v_loss: 102.359, vkl loss: 39.508
+Epoch:    7, tloss: 105.392, tr loss: 103.347, tkl loss: 3.168, vr loss: 102.324, v_loss: 102.324, vkl loss: 35.684
+Epoch:    8, tloss: 105.207, tr loss: 103.261, tkl loss: 2.607, vr loss: 102.128, v_loss: 102.128, vkl loss: 32.276
+Epoch:    9, tloss: 105.153, tr loss: 103.225, tkl loss: 2.280, vr loss: 101.964, v_loss: 101.964, vkl loss: 29.886
+Epoch:   10, tloss: 105.240, tr loss: 103.166, tkl loss: 2.194, vr loss: 102.010, v_loss: 102.010, vkl loss: 27.190
+Epoch:   11, tloss: 104.821, tr loss: 103.133, tkl loss: 1.688, vr loss: 101.889, v_loss: 101.889, vkl loss: 25.770
+Epoch:   12, tloss: 104.738, tr loss: 103.092, tkl loss: 1.646, vr loss: 101.799, v_loss: 101.799, vkl loss: 24.546
+Epoch:   13, tloss: 104.542, tr loss: 103.083, tkl loss: 1.460, vr loss: 101.784, v_loss: 101.784, vkl loss: 23.565
+Epoch:   14, tloss: 104.410, tr loss: 103.025, tkl loss: 1.385, vr loss: 101.842, v_loss: 101.842, vkl loss: 22.889
+Epoch:   15, tloss: 104.356, tr loss: 103.024, tkl loss: 1.332, vr loss: 101.614, v_loss: 101.614, vkl loss: 22.107
+...training complete.
+[ 0  1  2  3  4  5  6 14 15 16 17 18 19] [ 7  8  9 10 11 12 13]
+Random seed: 9612
+Random Train Reconstruction Loss: 178.6007, Random Test Reconstruction Loss: 157.9427
+torch.Size([12159, 50, 128]) torch.Size([12159, 50, 111])
+torch.Size([6952, 50, 128]) torch.Size([6952, 50, 111])
+12159 6952
+Epoch:    1, tloss: 123.059, tr loss: 116.791, tkl loss: 273.229, vr loss: 92.677, v_loss: 92.677, vkl loss: 232.185
+Epoch:    2, tloss: 116.780, tr loss: 113.364, tkl loss: 24.868, vr loss: 90.683, v_loss: 90.683, vkl loss: 139.923
+Epoch:    3, tloss: 115.346, tr loss: 112.768, tkl loss: 10.968, vr loss: 89.618, v_loss: 89.618, vkl loss: 111.567
+Epoch:    4, tloss: 115.056, tr loss: 112.542, tkl loss: 7.691, vr loss: 89.094, v_loss: 89.094, vkl loss: 90.420
+Epoch:    5, tloss: 114.551, tr loss: 112.338, tkl loss: 5.189, vr loss: 88.705, v_loss: 88.705, vkl loss: 77.575
+Epoch:    6, tloss: 114.345, tr loss: 112.201, tkl loss: 4.098, vr loss: 88.368, v_loss: 88.368, vkl loss: 67.784
+Epoch:    7, tloss: 114.062, tr loss: 112.103, tkl loss: 3.176, vr loss: 88.221, v_loss: 88.221, vkl loss: 60.638
+Epoch:    8, tloss: 114.009, tr loss: 112.023, tkl loss: 2.788, vr loss: 87.980, v_loss: 87.980, vkl loss: 55.110
+Epoch:    9, tloss: 113.870, tr loss: 111.949, tkl loss: 2.374, vr loss: 87.787, v_loss: 87.787, vkl loss: 50.835
+Epoch:   10, tloss: 113.803, tr loss: 111.901, tkl loss: 2.105, vr loss: 87.571, v_loss: 87.571, vkl loss: 47.228
+Epoch:   11, tloss: 113.673, tr loss: 111.853, tkl loss: 1.843, vr loss: 87.555, v_loss: 87.555, vkl loss: 44.269
+Epoch:   12, tloss: 113.349, tr loss: 111.800, tkl loss: 1.549, vr loss: 87.470, v_loss: 87.470, vkl loss: 42.765
+Epoch:   13, tloss: 113.258, tr loss: 111.758, tkl loss: 1.501, vr loss: 87.360, v_loss: 87.360, vkl loss: 41.035
+Epoch:   14, tloss: 113.124, tr loss: 111.722, tkl loss: 1.402, vr loss: 87.247, v_loss: 87.247, vkl loss: 39.837
+Epoch:   15, tloss: 113.062, tr loss: 111.696, tkl loss: 1.366, vr loss: 87.224, v_loss: 87.224, vkl loss: 38.653
+...training complete.
+[ 0  1  2  3  4  5  6  7  8  9 10 11 12 13] [14 15 16 17 18 19]
+Random seed: 7504
+Random Train Reconstruction Loss: 187.2651, Random Test Reconstruction Loss: 219.2501
+torch.Size([13337, 50, 128]) torch.Size([13337, 50, 111])
+torch.Size([5774, 50, 128]) torch.Size([5774, 50, 111])
+13337 5774
+Epoch:    1, tloss: 104.721, tr loss: 98.571, tkl loss: 249.273, vr loss: 127.196, v_loss: 127.196, vkl loss: 221.049
+Epoch:    2, tloss: 98.514, tr loss: 95.005, tkl loss: 23.623, vr loss: 125.823, v_loss: 125.823, vkl loss: 138.988
+Epoch:    3, tloss: 97.625, tr loss: 94.645, tkl loss: 11.714, vr loss: 124.389, v_loss: 124.389, vkl loss: 97.046
+Epoch:    4, tloss: 96.832, tr loss: 94.305, tkl loss: 6.994, vr loss: 124.131, v_loss: 124.131, vkl loss: 74.444
+Epoch:    5, tloss: 96.226, tr loss: 94.114, tkl loss: 4.524, vr loss: 124.113, v_loss: 124.113, vkl loss: 62.417
+Epoch:    6, tloss: 96.103, tr loss: 94.119, tkl loss: 3.476, vr loss: 123.730, v_loss: 123.730, vkl loss: 51.218
+Epoch:    7, tloss: 95.828, tr loss: 93.922, tkl loss: 2.804, vr loss: 123.510, v_loss: 123.510, vkl loss: 44.678
+Epoch:    8, tloss: 95.633, tr loss: 93.845, tkl loss: 2.276, vr loss: 123.968, v_loss: 123.968, vkl loss: 41.845
+Epoch:    9, tloss: 95.706, tr loss: 93.881, tkl loss: 2.056, vr loss: 124.072, v_loss: 124.072, vkl loss: 37.874
+Epoch:   10, tloss: 95.628, tr loss: 93.767, tkl loss: 1.894, vr loss: 123.270, v_loss: 123.270, vkl loss: 34.295
+Epoch:   11, tloss: 95.206, tr loss: 93.707, tkl loss: 1.499, vr loss: 123.217, v_loss: 123.217, vkl loss: 32.769
+Epoch:   12, tloss: 95.156, tr loss: 93.751, tkl loss: 1.405, vr loss: 122.939, v_loss: 122.939, vkl loss: 31.896
+Epoch:   13, tloss: 95.075, tr loss: 93.726, tkl loss: 1.349, vr loss: 123.062, v_loss: 123.062, vkl loss: 30.588
+Epoch:   14, tloss: 94.855, tr loss: 93.577, tkl loss: 1.279, vr loss: 123.851, v_loss: 123.851, vkl loss: 30.115
+Epoch:   15, tloss: 94.882, tr loss: 93.610, tkl loss: 1.272, vr loss: 122.727, v_loss: 122.727, vkl loss: 29.191
+...training complete.
+
