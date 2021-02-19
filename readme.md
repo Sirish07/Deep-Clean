@@ -1,0 +1,1 @@
+Automating the preprocessing Pipeline of EEG data using LFADS
